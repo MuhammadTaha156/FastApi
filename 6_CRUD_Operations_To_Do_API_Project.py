@@ -29,7 +29,7 @@ def get_todo(todo_id:int):
     return {"error":"Todo not found"}
 
 
-@app.post("/todos/{todo_id}")
+@app.put("/todos/{todo_id}")
 def update_todo(todo_id:int,updated_todo:Todo):
     for index,todo in enumerate(todos):
         if todo.id==todo_id:
@@ -39,4 +39,16 @@ def update_todo(todo_id:int,updated_todo:Todo):
                 "Data":updated_todo
             }
     return {"Error":"Todo not Found"}
-             
+
+
+@app.delete("/todos/{todo_id}")
+def delete_todo(todo_id:int):
+    for index,todo in enumerate(todos):
+        if todo.id==todo_id:
+            todos.pop(index)
+            return {"message":"Data Deleted"}
+    return {"Error":"Todo not Found"}
+
+
+
+
