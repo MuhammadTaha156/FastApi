@@ -13,7 +13,7 @@ app=FastAPI()
 # def hone(data=Depends(common_logic)):
 #     return data
 
-## Reuseable Logic
+#                                                         # Reuseable Logic
 
 # def get_current_users():
 #     return {

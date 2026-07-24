@@ -13,7 +13,7 @@ app=FastAPI()
 #     return {"id":1,
 #             "name":"Mohit"}
 
-# #Custom Exception/Error
+#                                            #Custom Exception/Error
 # class User_Not_Found_Exception(Exception):
 #     def __init__(self, name:str):
 #         self.name=name
